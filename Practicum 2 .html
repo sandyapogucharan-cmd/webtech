@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STRAW HATS</title>
+<style>
+  :root{
+    --border:#c9c9c9;
+    --purple:#5b2a86;
+    --bg:#ffffff;
+    --panel:#ffffff;
+    --gap:10px;
+    --radius:2px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+    color:#222;
+  }
+  .page{
+    max-width:1000px;
+    margin:0 auto;
+    background:var(--bg);
+    padding:14px 18px 24px;
+  }
+
+  .site-header{
+    text-align:center;
+    border-bottom:1px solid var(--border);
+    padding-bottom:6px;
+    margin-bottom:6px;
+  }
+  .site-header h1{
+    margin:6px 0;
+    font-size:20px;
+    color:var(--purple);
+    letter-spacing:.5px;
+  }
+  .site-nav{
+    display:flex;
+    justify-content:center;
+    gap:26px;
+    padding-bottom:8px;
+    border-bottom:1px solid var(--border);
+    margin-bottom:12px;
+  }
+  .site-nav a{
+    color:#2b2b2b;
+    text-decoration:underline;
+    font-size:13px;
+  }
+  .audio-bar{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:6px 14px;
+    max-width:420px;
+    margin:0 auto 14px;
+    font-size:12px;
+    color:#555;
+  }
+  .audio-bar button{
+    border:none;
+    background:none;
+    cursor:pointer;
+    font-size:14px;
+  }
+  .audio-bar .track{
+    flex:1;
+    height:3px;
+    background:#ddd;
+    border-radius:2px;
+    position:relative;
+  }
+  .audio-bar .track::after{
+    content:"";
+    position:absolute;
+    left:0; top:0; bottom:0;
+    width:35%;
+    background:#888;
+    border-radius:2px;
+  }
+  .audio-bar audio{
+    width:100%;
+  }
+  .hero{
+    width:100%;
+    border:1px solid var(--border);
+    margin-bottom:var(--gap);
+    display:block;
+    object-fit:cover;
+    max-height:260px;
+  }
+  .row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:var(--gap);
+    margin-bottom:var(--gap);
+  }
+  .card{
+    border:1px solid var(--border);
+    background:var(--panel);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+  }
+  .card-body{
+    flex:1;
+    position:relative;
+  }
+  .card iframe,
+  .card video,
+  .card embed{
+    width:100%;
+    height:100%;
+    border:none;
+    display:block;
+  }
+  .fixed-height{
+    height:210px;
+  }
+  .pdf-toolbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:#f7f7f7;
+    border-bottom:1px solid var(--border);
+    padding:4px 8px;
+    font-size:11px;
+    color:#555;
+  }
+  .pdf-toolbar .icons{
+    display:flex;
+    gap:8px;
+  }
+  .video-toolbar{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:#fff;
+    border-bottom:1px solid var(--border);
+    padding:6px 8px;
+    font-size:12px;
+    font-weight:bold;
+  }
+  .video-toolbar img{
+    width:18px;height:18px;border-radius:50%;
+  }
+
+  
+  .map-address{
+    padding:6px 8px;
+    font-size:11px;
+    color:#333;
+    border-bottom:1px solid var(--border);
+    background:#fafafa;
+  }
+
+  @media (max-width:640px){
+    .row{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="site-header">
+    <h1>Recycling</h1>
+  </header>
+  <nav class="site-nav">
+    <a href="#">Media Elements</a>
+    <a href="#">Application Form</a>
+  </nav>
+
+  
+  <div class="audio-bar">
+    <audio controls>
+      <source src="IMAGES/maksymmalko-ecology-music-green-energy-recycle-nature-background-intro-theme-269838 (1).mp3" type="audio/mpeg">
+    </audio>
+  </div>
+  <img class="hero" src="IMAGES/recycling.jpeg" alt="Campus aerial view">
+  <div class="row">
+    <div class="card">
+      <div class="pdf-toolbar">
+        <span>Calendar-2025... 1 / 14</span>
+        <div class="icons">
+          <span>&#8722;</span><span>65%</span><span>&#43;</span>
+          <span>&#8635;</span><span>&#8595;</span><span>&#9998;</span><span>&#8942;</span>
+        </div>
+      </div>
+      <div class="card-body fixed-height">
+        <embed src="IMAGES/file1.pdf.pdf" type="application/pdf">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="video-toolbar">
+        <img src="channel-icon.jpg" alt="channel icon">
+        <span>Recycling</span>
+      </div>
+      <div class="card-body fixed-height">
+<iframe class="media-frame" height="220"
+    src="https://www.youtube.com/embed/gzqIug1yDiI"
+    title="Campus orientation video"
+    allowfullscreen>
+</iframe>
+</iframe>
+      </div>
+    </div>
+  </div>
+
+ 
+  <div class="row">
+    <div class="card">
+      <div class="card-body fixed-height">
+        <video controls poster="video-poster.jpg">
+          <source src="IMAGES/134877-760686057_medium.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="map-address">Karunya Nagar, Coimbatore, Tamil Nadu 629851</div>
+      <div class="card-body fixed-height">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1958.6794021738956!2d76.74324024404146!3d10.936245638422289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba866bd6aaaaaab%3A0xc650b8a75e7b51f0!2sKarunya%20Institute%20of%20Technology%20and%20Sciences%20(Deemed%20University)!5e0!3m2!1sen!2sin!4v1787447593987!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
